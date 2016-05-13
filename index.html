@@ -1,229 +1,52 @@
-<!DOCTYPE html>
-<html lang="en-US">
 <head>
-	<title>Racket</title>
-	<meta name="description" content=" | Art &amp; Design Studio" />
-	<meta charset="UTF-8" />
-	<meta name="google-site-verification" content="dQKDXK7x6-WtMvfbFrMAHI8VbmaB56N_VfmeNS8Co8s" />	<link rel="profile" href="http://gmpg.org/xfn/11" />
-	<meta name="viewport" content="width=device-width; initial-scale=1, maximum-scale=1"/>	<link rel="icon" href="http://512vo00i0y-flywheel.netdna-ssl.com/wp-content/themes/racket/favicon.ico" type="image/x-icon" />
-	<link rel="pingback" href="http://racket.net.au/xmlrpc.php" />
-	<link rel="alternate" type="application/rss+xml" title="Racket" href="http://racket.net.au/feed/" />
-	<link rel="alternate" type="application/atom+xml" title="Racket" href="http://racket.net.au/feed/atom/" />
-			<!--[if lt IE 9]>
-		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-	<![endif]-->
-		<link rel="stylesheet" type="text/css" media="all" href="http://512vo00i0y-flywheel.netdna-ssl.com/wp-content/themes/racket/reset.css" />
-	<link rel="stylesheet" type="text/css" media="all" href="http://512vo00i0y-flywheel.netdna-ssl.com/wp-content/themes/racket/colorbox.css" />
-	<link rel="stylesheet" type="text/css" media="all" href="http://512vo00i0y-flywheel.netdna-ssl.com/wp-content/themes/racket/jquery.selectbox.css" />
-	<link rel="stylesheet" type="text/css" media="all" href="http://512vo00i0y-flywheel.netdna-ssl.com/wp-content/themes/racket/style.css" />
-	<link rel="alternate" type="application/rss+xml" title="Racket &raquo; Home Comments Feed" href="http://racket.net.au/home/feed/" />
-		<script type="text/javascript">
-			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/72x72\/","ext":".png","source":{"concatemoji":"http:\/\/racket.net.au\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.4.3"}};
-			!function(a,b,c){function d(a){var c,d,e,f=b.createElement("canvas"),g=f.getContext&&f.getContext("2d"),h=String.fromCharCode;return g&&g.fillText?(g.textBaseline="top",g.font="600 32px Arial","flag"===a?(g.fillText(h(55356,56806,55356,56826),0,0),f.toDataURL().length>3e3):"diversity"===a?(g.fillText(h(55356,57221),0,0),c=g.getImageData(16,16,1,1).data,g.fillText(h(55356,57221,55356,57343),0,0),c=g.getImageData(16,16,1,1).data,e=c[0]+","+c[1]+","+c[2]+","+c[3],d!==e):("simple"===a?g.fillText(h(55357,56835),0,0):g.fillText(h(55356,57135),0,0),0!==g.getImageData(16,16,1,1).data[0])):!1}function e(a){var c=b.createElement("script");c.src=a,c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g;c.supports={simple:d("simple"),flag:d("flag"),unicode8:d("unicode8"),diversity:d("diversity")},c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.simple&&c.supports.flag&&c.supports.unicode8&&c.supports.diversity||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
-		</script>
-		<style type="text/css">
-img.wp-smiley,
-img.emoji {
-	display: inline !important;
-	border: none !important;
-	box-shadow: none !important;
-	height: 1em !important;
-	width: 1em !important;
-	margin: 0 .07em !important;
-	vertical-align: -0.1em !important;
-	background: none !important;
-	padding: 0 !important;
-}
-</style>
-<script type='text/javascript' src='http://512vo00i0y-flywheel.netdna-ssl.com/wp-includes/js/jquery/jquery.js?ver=1.11.3'></script>
-<script type='text/javascript' src='http://512vo00i0y-flywheel.netdna-ssl.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.2.1'></script>
-<link rel='https://api.w.org/' href='http://racket.net.au/wp-json/' />
-<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://racket.net.au/xmlrpc.php?rsd" />
-<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://racket.net.au/wp-includes/wlwmanifest.xml" /> 
-<meta name="generator" content="WordPress 4.4.3" />
-<link rel="canonical" href="http://racket.net.au/" />
-<link rel='shortlink' href='http://racket.net.au/' />
-		<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
-		 	<script type="text/javascript" src="http://512vo00i0y-flywheel.netdna-ssl.com/wp-content/themes/racket/js/jquery.colorbox.js"></script>
-	<script type="text/javascript" src="http://512vo00i0y-flywheel.netdna-ssl.com/wp-content/themes/racket/js/jquery.bxslider.js"></script>
-	<script type="text/javascript" src="http://512vo00i0y-flywheel.netdna-ssl.com/wp-content/themes/racket/js/jQuery.fileinput.js"></script>
-	<script type="text/javascript" src="http://512vo00i0y-flywheel.netdna-ssl.com/wp-content/themes/racket/js/jquery.selectbox-0.2.js"></script>
-	<script type="text/javascript" src="http://512vo00i0y-flywheel.netdna-ssl.com/wp-content/themes/racket/js/myscript.js"></script>
+<meta name="description" content="Tadhg's Website">
+<meta name="keywords" content="HTML,CSS,JavaScript">
+<meta name="author" content="Tadhg Cooney">
 
-<script type="text/javascript">
-var _gaq = _gaq || [];
-_gaq.push(['_setAccount', 'UA-919829-13']);
-_gaq.push(['_trackPageview']);
-(function() {
-var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-})();
-</script>
-	
+
+
+ <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,600" type="text/css">
+ <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ruda:400,700" type="text/css">
+ <link rel="stylesheet" href='https://fonts.googleapis.com/css?family=Roboto:100,300' type="text/css">
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
 </head>
 
-<body class="home page page-id-4 page-template page-template-template_home page-template-template_home-php">
-<div id="header">
-	<div class="inner_box">
-		<div class="nav_link_box">
-		<a href="#" class="nav_link">Navigation</a>
-		</div>
-		<div class="art_logo">
-		<a href="http://racket.net.au/">RACKET</a>
-		</div>
-		<a href="http://racket.net.au/" id="logo"><img src="http://512vo00i0y-flywheel.netdna-ssl.com/wp-content/themes/racket/images/logo.png" alt="" /></a>
-		<div class="icon_box">
-			<span>Elsewhere </span>
-				<a href="http://twitter.com/r_a_c_k_e_t"><img src="http://512vo00i0y-flywheel.netdna-ssl.com/wp-content/themes/racket/images/icon_footer1.png" alt="Twitter" /></a>
-				<a href="https://www.facebook.com/weareracket"><img src="http://512vo00i0y-flywheel.netdna-ssl.com/wp-content/themes/racket/images/icon_footer2.png" alt="Facebook" /></a>
-				<a href="http://pinterest.com/racket_rachel/"><img src="http://512vo00i0y-flywheel.netdna-ssl.com/wp-content/themes/racket/images/icon_footer3.png" alt="Pinterest" /></a>
-				<a href="http://instagram.com/weareracket"><img src="http://512vo00i0y-flywheel.netdna-ssl.com/wp-content/themes/racket/images/icon_footer4.png" alt="Instagram" /></a>
-		</div>
-	</div>
-	<div class="nav_box">
-		<div class="nav_inner">
-			
-			<div class="menu-header-menu-container"><ul id="menu-header-menu" class="menu"><li id="menu-item-94" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-4 current_page_item menu-item-94"><a href="http://racket.net.au/">Home</a></li>
-<li id="menu-item-92" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-92"><a href="http://racket.net.au/design/">Design</a></li>
-<li id="menu-item-93" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-93"><a href="http://racket.net.au/art/">Art</a></li>
-<li id="menu-item-91" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-91"><a href="http://racket.net.au/contact/">Contact</a></li>
-<li id="menu-item-90" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-90"><a href="http://racket.net.au/project-enquiry/">Project Enquiry</a></li>
-</ul></div>			<a href="#" class="close_nav">CLOSE THIS</a>
-		</div>
-	</div>
-</div>
+<body id="body" class="body">
 
-<div id="content">
-	<div class="home_content">
-		<div class="home_banner">
+<header id="header" class="header">
+</header>
 
-			<img width="2000" height="664" src="http://512vo00i0y-flywheel.netdna-ssl.com/wp-content/uploads/2014/09/header2.jpg" class="attachment-full size-full" alt="header2" srcset="http://512vo00i0y-flywheel.netdna-ssl.com/wp-content/uploads/2014/09/header2-1024x339.jpg 1024w, http://512vo00i0y-flywheel.netdna-ssl.com/wp-content/uploads/2014/09/header2.jpg 2000w" sizes="(max-width: 2000px) 100vw, 2000px" />		
-		</div>
-		<div class="home_col">
-			<div class="home_col_inner">
-			<div class="left_box">
-				<div class="inner_box">
-				<h2>DESIGN</h2>
-<p>Racket is a design studio based in The Blue Mountains of Australia. We specialise in unique and beautiful work for web &amp; print. We work with clients across Australia and around the world.</p>
-<p><a class="more" href="design">MORE</a></p>
-				</div>
-			</div>
-			<div class="right_box">
-				<div class="inner_box">
-				<h2>ART</h2>
-<p>Rachel Peachey and Paul Mosig have been collaborating for several years, using photography, video, textiles, sculpture and found objects to look at  human / environment relationships.</p>
-<p><a class="more" href="art">MORE</a></p>
-				</div>
-			</div>
-			</div>
-		</div>
-		<div class="home_icon">
-			<h3>Meanwhile, elsewhere</h3>
-			<a href="http://twitter.com/r_a_c_k_e_t"><img src="http://512vo00i0y-flywheel.netdna-ssl.com/wp-content/themes/racket/images/icon_home1.png" alt="Twitter" /></a>
-			<a href="https://www.facebook.com/weareracket"><img src="http://512vo00i0y-flywheel.netdna-ssl.com/wp-content/themes/racket/images/icon_home2.png" alt="Facebook" /></a>
-			<a href="http://pinterest.com/racket_rachel/"><img src="http://512vo00i0y-flywheel.netdna-ssl.com/wp-content/themes/racket/images/icon_home3.png" alt="Pinterest" /></a>
-			<a href="http://instagram.com/weareracket"><img src="http://512vo00i0y-flywheel.netdna-ssl.com/wp-content/themes/racket/images/icon_home4.png" alt="Instagram" /></a>
-			<a href="https://racket.exposure.co/"><img src="http://512vo00i0y-flywheel.netdna-ssl.com/wp-content/themes/racket/images/icon_home5.png" alt="Exposure" /></a>
-		</div>
-	</div>
-</div>
+<footer id="footer" class="footer">
+</footer>
 
-<div id="footer" class="home_footer">
-	<div id="contact" class="contact_box">
-	<div class="contact_wrapper">
-		<div class="contact_inner">
-			<a href="#" class="close_contact">CLOSE THIS</a>
-			<h2>Contact Us</h2>
-			<p>Please feel free to give us a call on: +612 8004 9072<br/>Alternatively, please use the form below:</p>
-			<div class="contact_form">
-			
-                <div class='gf_browser_chrome gform_wrapper' id='gform_wrapper_2' ><form method='post' enctype='multipart/form-data'  id='gform_2'  action='/'>
-                        <div class='gform_body'><ul id='gform_fields_2' class='gform_fields top_label form_sublabel_below description_below'><li id='field_2_1' class='gfield gfield_contains_required field_sublabel_below field_description_below' ><label class='gfield_label' for='input_2_1' >Your Name<span class='gfield_required'>*</span></label><div class='ginput_container ginput_container_name'>
-                                    <input name='input_1' id='input_2_1' type='text' value='' class='medium' tabindex='1'  />
-                                </div></li><li id='field_2_2' class='gfield gfield_contains_required field_sublabel_below field_description_below' ><label class='gfield_label' for='input_2_2' >Your Email<span class='gfield_required'>*</span></label><div class='ginput_container ginput_container_email'>
-                            <input name='input_2' id='input_2_2' type='text' value='' class='medium' tabindex='2'   />
-                        </div></li><li id='field_2_3' class='gfield field_sublabel_below field_description_below' ><label class='gfield_label' for='input_2_3' >Phone Number</label><div class='ginput_container ginput_container_phone'><input name='input_3' id='input_2_3' type='text' value='' class='medium' tabindex='3'   /></div></li><li id='field_2_4' class='gfield field_sublabel_below field_description_below' ><label class='gfield_label' for='input_2_4' >Where are you based?</label><div class='ginput_container ginput_container_text'><input name='input_4' id='input_2_4' type='text' value='' class='medium'  tabindex='4'   /></div></li><li id='field_2_5' class='gfield gfield_contains_required field_sublabel_below field_description_below' ><label class='gfield_label' for='input_2_5' >Message<span class='gfield_required'>*</span></label><div class='ginput_container ginput_container_textarea'>
-					<textarea name='input_5' id='input_2_5' class='textarea medium' tabindex='5'    rows='10' cols='50'></textarea>
-				</div></li><li id='field_2_6' class='gfield gform_validation_container field_sublabel_below field_description_below' ><label class='gfield_label' for='input_2_6' >Name</label><div class='ginput_container'><input name='input_6' id='input_2_6' type='text' value='' /></div><div class='gfield_description'>This field is for validation purposes and should be left unchanged.</div></li>
-                            </ul></div>
-        <div class='gform_footer top_label'> <input type='submit' id='gform_submit_button_2' class='gform_button button' value='Submit' tabindex='6' onclick='if(window["gf_submitting_2"]){return false;}  window["gf_submitting_2"]=true;  ' /> 
-            <input type='hidden' class='gform_hidden' name='is_submit_2' value='1' />
-            <input type='hidden' class='gform_hidden' name='gform_submit' value='2' />
-            
-            <input type='hidden' class='gform_hidden' name='gform_unique_id' value='' />
-            <input type='hidden' class='gform_hidden' name='state_2' value='WyJbXSIsIjUzNWFjZGYyM2E1ZjBhZTM2OWMyNzE5MGM2NWIzNjc1Il0=' />
-            <input type='hidden' class='gform_hidden' name='gform_target_page_number_2' id='gform_target_page_number_2' value='0' />
-            <input type='hidden' class='gform_hidden' name='gform_source_page_number_2' id='gform_source_page_number_2' value='1' />
-            <input type='hidden' name='gform_field_values' value='' />
-            
-        </div>
-                        </form>
-                        </div><script type='text/javascript'> jQuery(document).bind('gform_post_render', function(event, formId, currentPage){if(formId == 2) {} } );jQuery(document).bind('gform_post_conditional_logic', function(event, formId, fields, isInit){} );</script><script type='text/javascript'> jQuery(document).ready(function(){jQuery(document).trigger('gform_post_render', [2, 1]) } ); </script>			</div>
-		</div>
-	</div>
-	</div>
-	<div id="enquiry" class="enquiry_box">
-	<div class="enquiry_wrapper">
-		<div class="enquiry_inner">
-			<a href="#" class="close_enquiry">CLOSE THIS</a>
-			<h2>Make a project enquiry</h2>
-			<p>Thanks for considering us for your project, please use our enquiry form below so we can<br/>understand the requirements and timing of your project.<br/>We will get back to you as soon as we can.</p>
-			<div class="enquiry_form">
-			
-                <div class='gf_browser_chrome gform_wrapper' id='gform_wrapper_1' ><form method='post' enctype='multipart/form-data'  id='gform_1'  action='/'>
-                        <div class='gform_body'><ul id='gform_fields_1' class='gform_fields top_label form_sublabel_below description_below'><li id='field_1_1' class='gfield gfield_contains_required field_sublabel_below field_description_below' ><label class='gfield_label' for='input_1_1' >Your Name<span class='gfield_required'>*</span></label><div class='ginput_container ginput_container_name'>
-                                    <input name='input_1' id='input_1_1' type='text' value='' class='medium' tabindex='1'  />
-                                </div></li><li id='field_1_2' class='gfield gfield_contains_required field_sublabel_below field_description_below' ><label class='gfield_label' for='input_1_2' >Your Email<span class='gfield_required'>*</span></label><div class='ginput_container ginput_container_email'>
-                            <input name='input_2' id='input_1_2' type='text' value='' class='medium' tabindex='2'   />
-                        </div></li><li id='field_1_3' class='gfield field_sublabel_below field_description_below' ><label class='gfield_label' for='input_1_3' >Phone</label><div class='ginput_container ginput_container_phone'><input name='input_3' id='input_1_3' type='text' value='' class='medium' tabindex='3'   /></div></li><li id='field_1_4' class='gfield field_sublabel_below field_description_below' ><label class='gfield_label' for='input_1_4' >Where are you based?</label><div class='ginput_container ginput_container_text'><input name='input_4' id='input_1_4' type='text' value='' class='medium'  tabindex='4'   /></div></li><li id='field_1_5' class='gfield field_sublabel_below field_description_below' ><label class='gfield_label' for='input_1_5' >Type of business</label><div class='ginput_container ginput_container_text'><input name='input_5' id='input_1_5' type='text' value='' class='medium'  tabindex='5'   /></div></li><li id='field_1_6' class='gfield gfield_contains_required field_sublabel_below field_description_below' ><label class='gfield_label' for='input_1_6' >Do you have a deadline?<span class='gfield_required'>*</span></label><div class='ginput_container ginput_container_select'><select name='input_6' id='input_1_6'  class='medium gfield_select' tabindex='6' ><option value='Please choose...' >Please choose...</option><option value='Less than 1 month' >Less than 1 month</option><option value='1 - 3 months' >1 - 3 months</option><option value='3 months or more' >3 months or more</option></select></div></li><li id='field_1_7' class='gfield gfield_contains_required field_sublabel_below field_description_below' ><label class='gfield_label' for='input_1_7' >What is your budget?<span class='gfield_required'>*</span></label><div class='ginput_container ginput_container_select'><select name='input_7' id='input_1_7'  class='medium gfield_select' tabindex='7' ><option value='Please choose...' >Please choose...</option><option value='$1000 - $3000' >$1000 - $3000</option><option value='$3000 - $5000' >$3000 - $5000</option><option value='$5000 - $10,000' >$5000 - $10,000</option><option value='$10,000 - $20,000' >$10,000 - $20,000</option><option value='$20,000 or more' >$20,000 or more</option><option value='Not sure' >Not sure</option></select></div></li><li id='field_1_8' class='gfield field_sublabel_below field_description_below' ><label class='gfield_label' for='input_1_8' >What are the project requirements?</label><div class='ginput_container ginput_container_select'><select name='input_8' id='input_1_8'  class='medium gfield_select' tabindex='8' ><option value='Please choose...' >Please choose...</option><option value='Identity &amp; branding' >Identity &amp; branding</option><option value='Print / physical design' >Print / physical design</option><option value='Art direction' >Art direction</option><option value='Website design &amp; build' >Website design &amp; build</option><option value='A combination of above' >A combination of above</option></select></div></li><li id='field_1_9' class='gfield field_sublabel_below field_description_below' ><label class='gfield_label' for='input_1_9' >Project Description</label><div class='ginput_container ginput_container_textarea'>
-					<textarea name='input_9' id='input_1_9' class='textarea medium' tabindex='9'    rows='10' cols='50'></textarea>
-				</div></li><li id='field_1_10' class='gfield field_sublabel_below field_description_below' ><label class='gfield_label' for='input_1_10' >Upload brief instead?</label><div class='ginput_container ginput_container_fileupload'><input type='hidden' name='MAX_FILE_SIZE' value='314572800' /><input name='input_10' id='input_1_10' type='file' class='medium' aria-describedby='extensions_message' tabindex='10' /><span id='extensions_message' class='screen-reader-text'></span></div></li><li id='field_1_11' class='gfield field_sublabel_below field_description_below' ><label class='gfield_label' for='input_1_11' >Would you like a copy of your enquiry?</label><div class='ginput_container ginput_container_select'><select name='input_11' id='input_1_11'  class='medium gfield_select' tabindex='11' ><option value='Please choose...' >Please choose...</option><option value='Yes please' >Yes please</option><option value='No thanks' >No thanks</option></select></div></li>
-                            </ul></div>
-        <div class='gform_footer top_label'> <input type='submit' id='gform_submit_button_1' class='gform_button button' value='Submit' tabindex='12' onclick='if(window["gf_submitting_1"]){return false;}  window["gf_submitting_1"]=true;  ' /> 
-            <input type='hidden' class='gform_hidden' name='is_submit_1' value='1' />
-            <input type='hidden' class='gform_hidden' name='gform_submit' value='1' />
-            
-            <input type='hidden' class='gform_hidden' name='gform_unique_id' value='' />
-            <input type='hidden' class='gform_hidden' name='state_1' value='WyJbXSIsIjUzNWFjZGYyM2E1ZjBhZTM2OWMyNzE5MGM2NWIzNjc1Il0=' />
-            <input type='hidden' class='gform_hidden' name='gform_target_page_number_1' id='gform_target_page_number_1' value='0' />
-            <input type='hidden' class='gform_hidden' name='gform_source_page_number_1' id='gform_source_page_number_1' value='1' />
-            <input type='hidden' name='gform_field_values' value='' />
-            
-        </div>
-                        </form>
-                        </div><script type='text/javascript'> if(typeof gf_global == 'undefined') var gf_global = {"gf_currency_config":{"name":"U.S. Dollar","symbol_left":"$","symbol_right":"","symbol_padding":"","thousand_separator":",","decimal_separator":".","decimals":2},"base_url":"http:\/\/racket.net.au\/wp-content\/plugins\/gravityforms","number_formats":[],"spinnerUrl":"http:\/\/racket.net.au\/wp-content\/plugins\/gravityforms\/images\/spinner.gif"};jQuery(document).bind('gform_post_render', function(event, formId, currentPage){if(formId == 1) {} } );jQuery(document).bind('gform_post_conditional_logic', function(event, formId, fields, isInit){} );</script><script type='text/javascript'> jQuery(document).ready(function(){jQuery(document).trigger('gform_post_render', [1, 1]) } ); </script>			</div>
-		</div>
-	</div>
-	</div>
-	<div class="footer_top">
-		<div class="inner_box">
-			<div class="footer_info">
-			Please do not share our images<br/>without asking or attribution
-			</div>
-			<div class="footer_link">
-				<a href="http://racket.net.au/contact/" class="contact_link">Contact Us</a> / <a href="http://racket.net.au/project-enquiry/"  class="enquiry_link">Project Enquiry</a>
-			</div>
-			<div class="footer_back">
-				<a href="#header" class="back">TOP OF PAGE</a>
-			</div>
-			
-		</div>
-	</div>
-	<div class="footer_bottom">
-		<a href="http://racket.net.au/"><img src="" alt="" /></a><br/>
-		
-	</div>
-</div>
-<link rel='stylesheet' id='gforms_reset_css-css'  href='http://512vo00i0y-flywheel.netdna-ssl.com/wp-content/plugins/gravityforms/css/formreset.min.css?ver=1.9.19' type='text/css' media='all' />
-<link rel='stylesheet' id='gforms_formsmain_css-css'  href='http://512vo00i0y-flywheel.netdna-ssl.com/wp-content/plugins/gravityforms/css/formsmain.min.css?ver=1.9.19' type='text/css' media='all' />
-<link rel='stylesheet' id='gforms_ready_class_css-css'  href='http://512vo00i0y-flywheel.netdna-ssl.com/wp-content/plugins/gravityforms/css/readyclass.min.css?ver=1.9.19' type='text/css' media='all' />
-<link rel='stylesheet' id='gforms_browsers_css-css'  href='http://512vo00i0y-flywheel.netdna-ssl.com/wp-content/plugins/gravityforms/css/browsers.min.css?ver=1.9.19' type='text/css' media='all' />
-<script type='text/javascript' src='http://512vo00i0y-flywheel.netdna-ssl.com/wp-includes/js/wp-embed.min.js?ver=4.4.3'></script>
-<script type='text/javascript' src='http://512vo00i0y-flywheel.netdna-ssl.com/wp-content/plugins/gravityforms/js/jquery.json.js?ver=1.9.19'></script>
-<script type='text/javascript' src='http://512vo00i0y-flywheel.netdna-ssl.com/wp-content/plugins/gravityforms/js/gravityforms.min.js?ver=1.9.19'></script>
+
+
+
+
+<script type="text/javascript" src="./js/jquery-1.11.2.min.js"></script>
+    <script type="text/javascript" src="./js/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="./js/bootstrap.min.js"></script> 
+    <script type="text/javascript" src="./js/bootstrap-hover-dropdown.min.js"></script>
+
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js'></script>
+
+<script type="text/javascript" src="./js/smoothscroll.js"></script>
+  
+
+        <script src="./js/smooth-scroll.js"></script>
+        <script>
+            smoothScroll.init({
+                speed: 1000,
+                easing: 'easeInOutCubic',
+                offset: 100,
+                updateURL: true,
+                callbackBefore: function ( toggle, anchor ) {},
+                callbackAfter: function ( toggle, anchor ) {}
+            });
+        </script>
+
+
 </body>
-</html>
-</body>
-</html>
-
