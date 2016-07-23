@@ -846,7 +846,7 @@ html {
 }
 .navbar__section {
   background: #000000;
-  height: auto;
+  height: 60px;
   position: absolute;
   top: 0;
   width: 100%;
@@ -875,7 +875,7 @@ html {
 }
 .navbar__column {
   display: table-cell;
-  vertical-align: middle;
+  vertical-align: top;
 }
 .navbar__column--xxs {
   width: 1%;
@@ -920,7 +920,7 @@ html {
   margin-top: -11px;
   position: absolute;
   right: 0;
-  top: 50%;
+  top: 32%;
   z-index: 10000;
 }
 .navbar--collapsed .navbar__container {
@@ -990,7 +990,7 @@ html {
 }
 .navbar--stuck .navbar__section,
 .navbar--relative .navbar__section {
-  background: #2c2c2c;
+  background: #000000;
 }
 @media (max-width: 991px) {
   .navbar--auto-collapse .navbar__container {
@@ -1173,7 +1173,7 @@ footer{
 .brand--inline .brand__logo,
 .brand--inline .brand__name {
   display: table-cell;
-  vertical-align: middle;
+  padding-top:1px;
 }
 .brand--inline .brand__logo {
   padding-right: 10px;
@@ -1473,7 +1473,7 @@ footer{
   top: 8px;
 }
 .hero__subtext {
-  font-size: 21px;
+  font-size: 24px;
   line-height: 29px;
   margin: -32px 0 3px 0;
   padding: 0 0 41px 0;
@@ -1839,7 +1839,7 @@ footer{
   margin: -26px 0 13px 0;
   position: relative;
   text-align: left;
-  top: 26px;
+  top: 21px;
 }
 .buttons__btn,
 .buttons__link {

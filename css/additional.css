@@ -261,7 +261,7 @@
 #msg-box3-117 .article P {
   text-align: left;
 }
-
+/*
 @media (max-width: 1350px) {
 .collage{
 
@@ -296,18 +296,19 @@ max-width: 100% !important;
 width:1800px; text-align:center; display:inline-block;
 }
 }
-
+*/
 .btn-warning {
-    border-color: #f9a527 !important;
-    color: #cdaa51 !important;
-    
     border-color: #cdaa51 !important;
+    color: #000000 !important;
+    background-color: #ffffff !important;
+    
   }
 
   .btn-warning:hover {
    
     background-color: #000000 !important;
-    
+    color:#ffffff !important;
+
   }
 
   .footer-distributed{
@@ -536,4 +537,149 @@ width:1800px; text-align:center; display:inline-block;
 }
 .test  a:nth-of-type(6):before {
   content: '\f1cb';
+}
+
+
+/* custom fonts */
+
+@font-face {
+    font-family: 'Bebas Neue';
+    src: url(fonts/Bebas Neue Thin.otf);
+    font-style: ;
+ 	 
+}
+
+
+
+.fb-page{
+
+padding-bottom:30px;
+
+
+
+}
+
+/* text links */
+
+a{
+	color:#000000;
+}
+
+a:hover{
+	color:#cdaa51 !important;
+}
+
+.collage{
+
+width:100%; 
+text-align:  center;
+
+
+}
+
+.offer{
+
+text-align:  center; 
+margin-top:50px; 
+
+}
+
+.offer-text{
+
+text-align:  center; 
+padding-top:20px;
+}
+
+.offer-sub{
+	padding-top:20px;
+	font-size: 24px;
+	text-align: center;
+}
+
+.offer-icon{
+width:40%; 
+text-align:  center; 
+display: inline-block;
+
+}
+
+#book-text{
+text-align:  
+center; 
+padding-top:100px;
+
+}
+
+#right-bar {
+	text-align: center;
+	display: inline-block; 
+	margin-top:50px; 
+
+	-webkit-box-shadow: 0px 7px 24px 1px rgba(0,0,0,0.61);
+-moz-box-shadow: 0px 7px 24px 1px rgba(0,0,0,0.61);
+box-shadow: 0px 7px 24px 1px rgba(0,0,0,0.61);
+}
+
+.brand__name{
+
+	font-size:24px;
+}
+
+.navbar__item .btn{
+
+font-size: 20px !important;
+
+}
+
+.book{
+
+	margin-top: -40px;
+}
+
+.banner-text{
+
+	color:#ffffff;
+
+}
+
+form .btn-warning{
+
+	
+	text-align: center
+}
+
+.book .btn-warning{
+
+	width:100%;
+}
+
+
+
+.carousel-indicators li{
+
+	border: 0.5px solid; !important;
+}
+
+.profile-img{
+
+
+	border-radius:50%; 
+	 max-width:160px;
+
+}
+
+.profile{
+	margin:0;
+
+	float:left;
+
+	}
+
+.testimonials .item .content {
+    padding-left: 210px;
+}
+
+.content{
+padding-top: 20px;
+	padding-left:190px;
 }
