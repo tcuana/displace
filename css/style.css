@@ -743,6 +743,8 @@ html {
     top: 26px;
   }
 }
+
+
 .navbar {
   position: relative;
   width: 100%;
@@ -757,7 +759,7 @@ html {
 }
 .navbar:before,
 .navbar__container {
-  height: 98px;
+  height: 20px;
 }
 .navbar--ss .navbar__brand-link:after,
 .navbar--ss .navbar__brand-img {
@@ -843,7 +845,7 @@ html {
   transition: all 300ms ease-in-out 0s;
 }
 .navbar__section {
-  background: #2c2c2c;
+  background: #000000;
   height: auto;
   position: absolute;
   top: 0;
@@ -1052,7 +1054,9 @@ html {
   content: "";
   display: block;
   height: 98px;
-}
+} 
+
+
 .hamburger {
   cursor: pointer;
   height: 23px;
@@ -2060,3 +2064,18 @@ footer{
 	text-align: center;
 	padding: 0;
 }
+
+/* EXTRA new header */
+
+#topnavbar {
+    margin: 0;
+}
+#topnavbar.affix {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+
+
+/* END */
