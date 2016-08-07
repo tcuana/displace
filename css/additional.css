@@ -301,13 +301,15 @@ width:1800px; text-align:center; display:inline-block;
     border-color: #cdaa51 !important;
     color: #000000 !important;
     background-color: #ffffff !important;
+    border-radius: 5%;
     
   }
 
   .btn-warning:hover {
    
-    background-color: #000000 !important;
-    color:#ffffff !important;
+    background-color: #cdaa51 !important;
+    opacity:0.7;
+    color:#000000 !important;
 
   }
 
@@ -481,7 +483,7 @@ width:1800px; text-align:center; display:inline-block;
 }
 
 .email {
-  color: #cdaa51 !important;
+  color: #ffffff !important;
   
 }
 
@@ -549,7 +551,12 @@ width:1800px; text-align:center; display:inline-block;
  	 
 }
 
+@font-face{
 
+    font-family: 'Oswald';
+    src: url(fonts/Bebas Neue Thin.otf);
+
+}
 
 .fb-page{
 
@@ -613,7 +620,7 @@ padding-top:100px;
 #right-bar {
 	text-align: center;
 	display: inline-block; 
-	margin-top:50px; 
+	
 
 	-webkit-box-shadow: 0px 7px 24px 1px rgba(0,0,0,0.61);
 -moz-box-shadow: 0px 7px 24px 1px rgba(0,0,0,0.61);
@@ -668,18 +675,99 @@ form .btn-warning{
 
 }
 
+.videoproject{
+
+  margin:10px;
+  padding:30px;
+}
+
 .profile{
 	margin:0;
 
-	float:left;
+	float:right;
 
 	}
 
-.testimonials .item .content {
-    padding-left: 210px;
-}
 
 .content{
 padding-top: 20px;
-	padding-left:190px;
+
 }
+
+.content .title{
+  text-align: right;
+}
+
+.main-page{
+
+padding-top:20px;
+
+}
+
+.main-page2{
+
+padding-top:20px;
+
+}
+
+
+@media (min-width:500px){
+.main-page{
+
+padding-top:50px;
+
+}
+
+
+}
+
+@media (max-width:500px){
+
+.hero__text{
+
+font-size: 35px;
+
+}
+
+.hero__subtext{
+font-size: 15px;
+
+}
+
+.offer-sub{
+font-size: 15px;
+
+}
+
+
+
+
+}
+
+.breadcrumb{
+
+  background-color: inherit;
+}
+
+.contact-us{
+
+  padding:30px;
+  margin:10px;
+}
+
+.home-btn{
+text-align: center;
+margin-bottom:-30px;
+padding-top:5px;
+}
+
+body{
+font-family: 'Oswald', "Roboto", sans-serif !important;
+
+}
+
+h1, h2, h3, .navbar__item{
+
+  font-family: "Bebas Neue", 'Oswald';
+}
+

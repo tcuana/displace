@@ -748,6 +748,8 @@ html {
 .navbar {
   position: relative;
   width: 100%;
+border:none;
+
 }
 .navbar:before {
   content: "";
@@ -917,12 +919,13 @@ html {
 }
 .navbar__hamburger {
   display: none;
-  margin-top: -11px;
+  
   position: absolute;
   right: 0;
-  top: 32%;
+  top:21%;
   z-index: 10000;
 }
+
 .navbar--collapsed .navbar__container {
   position: relative;
 }
