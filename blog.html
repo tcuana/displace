@@ -15,7 +15,7 @@
   <link rel="stylesheet" href="css/slider.css">
   <link rel="stylesheet" href="css/gallary.css">
   <link rel="stylesheet" href="css/additional.css" type="text/css">
-
+<link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
 <!-- Custom Stylesheets -->
 
    
@@ -23,7 +23,7 @@
 
 </head>
 
-<body style="font-family: 'Bebas Neue' !important;">
+<body>
 
 
 
@@ -77,7 +77,7 @@
             
                                 <div class="col-md-12 mylogo" style="text-align:center; padding-bottom:100px;">
                                 
-                            <img class="logoimg" src="img/backg/audio.png" alt="Displace Studios" style="width:200px;"></a></span>
+                        <a  href="#home-content" style="">    <img class="logoimg" src="img/backg/audio.png" alt="Displace Studios" style="width:200px;"></a></span>
 <h3 class="banner-text hero__text">Displace Blog</h3>
                                 </div>
 
@@ -90,7 +90,7 @@
             
                                 <div class="col-md-12 mylogo" style="text-align:center; padding-bottom:100px;">
                                 
-                            <img class="logoimg" src="img/backg/film.png" alt="Displace Studios" style="width:200px;"></a></span>
+                          <a  href="#home-content" style="">  <img class="logoimg" src="img/backg/film.png" alt="Displace Studios" style="width:200px;"></a></span>
 <h3 class="banner-text hero__text">Blog</h3>
                                 </div>
                        
@@ -100,8 +100,13 @@
 
 </header>
 
-<section class="section section--relative section--fixed-size" id="form1-35" style="padding-top:80px;">
- <h1 style="text-align:center;" class="header__text">Check out our news and updates</h1>
+   <ol class="breadcrumb" style="text-align:center;">
+  <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+  <li class="breadcrumb-item active">Blog</li>
+</ol>
+
+<section class="section section--relative section--fixed-size  main-page2" id="form1-35" >
+ <h1 style="text-align:center;" id="home-content" class="header__text">Check out our news and updates</h1>
     <hr>
  <!-- Main Content -->
     <div class="container">
@@ -278,7 +283,7 @@
                     <p>+353 85 161 3044</p>
                 </div>
 
-                <div>
+                <div >
                     <i class="fa fa-envelope"></i>
                     <p><a class="email" href="mailto:support@company.com">support@company.com</a></p>
                 </div>
@@ -297,13 +302,9 @@
     
 <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet"/>
 <body>
-  <div class="test"><a href="#">
-      <p>Facebook</p></a><a href="#">
-      <p>Twitter</p></a><a href="#">
-      <p>Google+</p></a><a href="#">
-      <p>Github</p></a><a href="#">
-      <p>Dribble</p></a><a href="#">
-      <p>CodePen</p></a></div>
+  <div class="test"><a href="https://www.facebook.com/DisplaceStudios/?fref=ts">
+      <p>Facebook</p></a><a href="https://www.instagram.com/displacestudio/">
+      <p>Twitter</p></a>></div>
 </body>
     </div>
 </div>
@@ -349,6 +350,104 @@ $('#topnavbar').affix({
 
 </body>
 
+
+        <!-- Video Modal -->
+    <div class="modal fade" id="video-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="background: rgba(0, 0, 0, 0.65);">
+      <div class="modal-dialog">
+        
+        <div style="background-color: rgba(255, 255, 255, 0) !important;">
+
+          <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true" style="line-height: 2 !important; color: #FFF !important;opacity: 1 !important;font-size: 30px;"><i class="fa fa-times"></i></button>
+          </div>
+          
+          <div class="col-md-12 col-sm-12 col-xs-12">
+            <center><iframe width="100%" height="525" src="" frameborder="0" allowfullscreen></iframe></center>
+           
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+
+<script type="text/javascript">
+  jQuery(document).ready(function($){
+
+  // End playback when video modal is closed
+
+    $('[data-provider="modal-video"]').on(
+    'click',
+
+    function (evt) {
+        evt.preventDefault();
+        var $target = $(evt.currentTarget),
+            videoSrc = $target.data('video-embed'),
+            $modal = $($target.data('target'));
+
+  
+        //Fit Vids Implemented Below for Mobile Compatibility
+        //$("#vid1Thumbnail-1 iframe").wrap("<div class='flex-video'/>");
+        //$(".flex-video").fitVids();
+
+        $modal
+        .find('iframe').attr('src', videoSrc)
+        .end()
+        .on('hide.bs.modal', function () {
+            $(this)
+            .off('hide.bs.modal')
+            .find('iframe').attr('src', '');
+        })
+        .modal('show');
+    });
+
+
+    // Animate scrolling
+
+    (function($) {
+
+    $.fn.visible = function(partial) {
+    
+      var $t            = $(this),
+          $w            = $(window),
+          viewTop       = $w.scrollTop(),
+          viewBottom    = viewTop + $w.height(),
+          _top          = $t.offset().top,
+          _bottom       = _top + $t.height(),
+          compareTop    = partial === true ? _bottom : _top,
+          compareBottom = partial === true ? _top : _bottom;
+    
+    return ((compareBottom <= viewBottom) && (compareTop >= viewTop));
+
+  };
+    
+})(jQuery);
+
+var win = $(window);
+
+var allMods = $(".module");
+
+allMods.each(function(i, el) {
+  var el = $(el);
+  if (el.visible(true)) {
+    el.addClass("already-visible"); 
+  } 
+});
+
+win.scroll(function(event) {
+  
+  allMods.each(function(i, el) {
+    var el = $(el);
+    if (el.visible(true)) {
+      el.addClass("come-in"); 
+    } 
+  });
+  
+});
+
+
+});
+</script>
 
 
 </html>
